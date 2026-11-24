@@ -6,7 +6,7 @@
 /*   By: aybelaou <aybelaou@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 14:58:00 by aybelaou          #+#    #+#             */
-/*   Updated: 2026/04/21 14:58:00 by aybelaou         ###   ########.fr       */
+/*   Updated: 2026/11/24 18:30:00 by aybelaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,12 @@ void	printElement(const T& value)
 void	increment(int& value)
 {
 	value++;
+}
+
+int	doubleValue(int& value)
+{
+	value *= 2;
+	return (value);
 }
 
 void	makeUpper(char& c)
@@ -71,6 +77,11 @@ int	main(void)
 	std::cout << "--- const arrays ---" << std::endl;
 	std::cout << "const strings: ";
 	iter(texts, textsLen, printElement<std::string>);
+	std::cout << std::endl;
+	std::cout << "--- non-void function ---" << std::endl;
+	iter(numbers, numbersLen, doubleValue);
+	std::cout << "doubled ints: ";
+	iter(numbers, numbersLen, printElement<int>);
 	std::cout << std::endl;
 	std::cout << "--- zero-length safety ---" << std::endl;
 	g_callCount = 0;

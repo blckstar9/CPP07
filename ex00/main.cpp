@@ -6,7 +6,7 @@
 /*   By: aybelaou <aybelaou@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 14:58:00 by aybelaou          #+#    #+#             */
-/*   Updated: 2026/04/21 14:58:00 by aybelaou         ###   ########.fr       */
+/*   Updated: 2026/11/24 18:30:00 by aybelaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,13 @@ class Number
 			return (_value);
 		}
 
+};
+
+class NoDefault
+{
+	public:
+		int	value;
+		NoDefault(int v) : value(v) {}
 };
 
 std::ostream&	operator<<(std::ostream& os, const Number& number)
@@ -94,5 +101,9 @@ int	main(void)
 	std::cout << "after swap -> first: " << firstNumber << ", second: " << secondNumber << std::endl;
 	std::cout << "min(number) = " << ::min(firstNumber, secondNumber) << std::endl;
 	std::cout << "max(number) = " << ::max(firstNumber, secondNumber) << std::endl;
+	NoDefault	ndA(10);
+	NoDefault	ndB(20);
+	::swap(ndA, ndB);
+	std::cout << "swap without default ctor -> ndA: " << ndA.value << ", ndB: " << ndB.value << std::endl;
 	return (0);
 }

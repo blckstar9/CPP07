@@ -6,7 +6,7 @@
 /*   By: aybelaou <aybelaou@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 14:58:00 by aybelaou          #+#    #+#             */
-/*   Updated: 2026/04/21 14:58:00 by aybelaou         ###   ########.fr       */
+/*   Updated: 2026/11/24 18:30:00 by aybelaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,8 @@
 template <typename T>
 void	swap(T& first, T& second)
 {
-	T	tmp;
+	T	tmp = first;
 
-	tmp = first;
 	first = second;
 	second = tmp;
 }

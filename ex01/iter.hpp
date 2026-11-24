@@ -6,7 +6,7 @@
 /*   By: aybelaou <aybelaou@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 14:58:00 by aybelaou          #+#    #+#             */
-/*   Updated: 2026/04/21 14:58:00 by aybelaou         ###   ########.fr       */
+/*   Updated: 2026/11/24 18:30:00 by aybelaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 #include <cstddef>
 
-template <typename T>
-void	iter(T* array, const std::size_t length, void (*function)(T&))
+template <typename T, typename R>
+void	iter(T* array, const std::size_t length, R (*function)(T&))
 {
 	std::size_t	i;
 
@@ -28,8 +28,8 @@ void	iter(T* array, const std::size_t length, void (*function)(T&))
 	}
 }
 
-template <typename T>
-void	iter(const T* array, const std::size_t length, void (*function)(const T&))
+template <typename T, typename R>
+void	iter(const T* array, const std::size_t length, R (*function)(const T&))
 {
 	std::size_t	i;
 
